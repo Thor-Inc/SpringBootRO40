@@ -15,6 +15,10 @@
     <label>
         Amount:
         <input type="number" th:field="*{amount}">
+        <ul th:if="${#fields.hasErrors('amount')}">
+            <li th:each="err : ${#fields.errors('amount')}" th:text="${err}">_Input is incorrect</li>
+        </ul>
+
     </label>
 
     <button type="submit">SEND DATA</button>

@@ -21,11 +21,18 @@ public class OrderController {
         return "orders";
     }
 
-
     @PostMapping("/create")
     public String handleNewOrder(@ModelAttribute("orderForm") final OrderForm orderForm) {
+        if(validate(orderForm.getAmount())){
+            return "redirect:/error";
+        }
+
         // orderForm fields are filled with user values
         // handle new Order here
         return "redirect:/hello";
     }
+    private boolean validate(int amount){
+        return amount < 5;
+    }
+
 }
