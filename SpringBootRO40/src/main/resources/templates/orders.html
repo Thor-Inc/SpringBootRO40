@@ -1,0 +1,23 @@
+<!--orders.html file-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+</head>
+<body>
+<form method="post" th:action="@{/orders/create}" th:object="${orderForm}">
+    <label>
+        Product name:
+        <input type="text" th:field="*{productName}">
+    </label>
+
+    <label>
+        Amount:
+        <input type="number" th:field="*{amount}">
+    </label>
+
+    <button type="submit">SEND DATA</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!--welcome.html in the resources/templates directory-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="/webjars/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+</head>
+<body>
+<p>Hello from thymeleaf view</p>
+<p th:text="${helloMsg}"></p>
+<p th:text="${helloTitle}"></p>
+<p th:text="${helloSubTitle}"></p>
+<p th:text="${hello}"></p>
+</body>
+</html>
