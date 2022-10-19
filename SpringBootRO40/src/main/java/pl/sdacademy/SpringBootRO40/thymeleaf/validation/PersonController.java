@@ -1,4 +1,4 @@
-package pl.sdacademy.SpringBootRO40.validation;
+package pl.sdacademy.SpringBootRO40.thymeleaf.validation;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

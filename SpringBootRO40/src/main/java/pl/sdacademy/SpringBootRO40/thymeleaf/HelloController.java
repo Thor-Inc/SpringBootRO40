@@ -3,10 +3,6 @@ package pl.sdacademy.SpringBootRO40.thymeleaf;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import pl.sdacademy.SpringBootRO40.validation.Person;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 @Controller
 public class HelloController {

@@ -1,12 +1,12 @@
-package pl.sdacademy.SpringBootRO40.thymeleaf;
+package pl.sdacademy.SpringBootRO40.thymeleaf.validation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Main {
+public class ValidatePersonRun {
 
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(ValidatePersonRun.class, args);
     }
 }

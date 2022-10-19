@@ -1,0 +1,63 @@
+<!--person.html file-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Person</title>
+</head>
+<body>
+<form method="post" th:action="@{/createPerson}" th:object="${personForm}">
+    <label>
+        Person firstname:
+        <input type="text" th:field="*{firstName}">
+    </label>
+    <br>
+
+    <label>
+        Person lastname:
+        <input type="text" th:field="*{lastName}">
+    </label>
+    <br>
+
+    <label>
+        Person email:
+        <input type="text" th:field="*{email}">
+    </label>
+    <br>
+
+    <label>
+        Person age:
+        <input type="text" th:field="*{age}">
+    </label>
+    <br>
+
+    <label>
+        Person address:
+        <input type="text" th:field="*{address}">
+    </label>
+    <br>
+
+    <select name="values" id="person">
+        <option th:each="personOption : ${values}" th:text="${personOption}"></option>
+
+    </select>
+    <br>
+    <table style="border: solid 1px black;">
+        <thead>
+        <tr>
+            <th>Roll No.</th>
+            <th>Score</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="attr: ${customAttributes}">
+            <td th:text="${attr.key}" />
+            <td th:text="${attr.value}" />
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <button type="submit">SEND DATA</button>
+</form>
+</body>
+</html>

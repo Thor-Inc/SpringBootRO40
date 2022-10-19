@@ -20,7 +20,8 @@ public class OrderController {
     }
 
     @GetMapping("/create")
-    public String showOrderForm() {
+    public String showOrderForm(final ModelMap modelMap) {
+        modelMap.addAttribute("orderForm", new OrderForm());
         return "orders";
     }
 

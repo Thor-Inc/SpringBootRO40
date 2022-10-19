@@ -1,0 +1,29 @@
+<!--orders.html file-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Transfer Money</title>
+</head>
+<body>
+<form method="post" th:action="@{/transferMoney}" th:object="${transferForm}">
+    <label>
+        Client name:
+        <input type="text" th:field="*{name}">
+    </label>
+
+    <label>
+        Client iban:
+        <input type="text" th:field="*{iban}">
+    </label>
+
+    <label>
+        Amount:
+        <input type="text" th:field="*{amount}">
+
+    </label>
+
+    <button type="submit">SEND DATA</button>
+</form>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package pl.sdacademy.SpringBootRO40.validation;
+package pl.sdacademy.SpringBootRO40.thymeleaf.validation;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
