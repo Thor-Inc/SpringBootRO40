@@ -1,0 +1,35 @@
+<!--getOrders.html file-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th> Id </th>
+        <th> Status </th>
+        <th> Total </th>
+        <th> Payment Method </th>
+        <th> Date </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${orders.empty}">
+        <td colspan="5"> No Books Available </td>
+    </tr>
+    <tr th:each="order : ${orders}">
+        <td><span th:text="${order.id}"> Id </span></td>
+        <td><span th:text="${order.status}"> Status </span></td>
+        <td><span th:text="${order.total}"> Total </span></td>
+        <td><span th:text="${order.paymentMethod}"> Payment Method </span></td>
+        <td><span th:text="${order.date}"> Date </span></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
